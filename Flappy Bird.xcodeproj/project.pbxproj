@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72152792200E1435001812F1 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72152791200E1435001812F1 /* Score.swift */; };
 		7221F0F2200B5B100039004A /* RandomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221F0F1200B5B100039004A /* RandomFunction.swift */; };
 		724A0E57200A88680069EA94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724A0E56200A88680069EA94 /* AppDelegate.swift */; };
 		724A0E59200A88680069EA94 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 724A0E58200A88680069EA94 /* GameScene.sks */; };
@@ -16,13 +17,15 @@
 		724A0E62200A88680069EA94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724A0E60200A88680069EA94 /* Main.storyboard */; };
 		724A0E64200A88680069EA94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 724A0E63200A88680069EA94 /* Assets.xcassets */; };
 		724A0E67200A88680069EA94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724A0E65200A88680069EA94 /* LaunchScreen.storyboard */; };
+		72BE7181200BA807006BD73E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE7180200BA807006BD73E /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72152791200E1435001812F1 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		7221F0F1200B5B100039004A /* RandomFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFunction.swift; sourceTree = "<group>"; };
 		724A0E53200A88680069EA94 /* Flappy Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		724A0E56200A88680069EA94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		724A0E58200A88680069EA94 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		724A0E58200A88680069EA94 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = "Flappy Bird/GameScene.sks"; sourceTree = SOURCE_ROOT; };
 		724A0E5A200A88680069EA94 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		724A0E5C200A88680069EA94 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		724A0E5E200A88680069EA94 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		724A0E63200A88680069EA94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		724A0E66200A88680069EA94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		724A0E68200A88680069EA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72BE7180200BA807006BD73E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		724A0E55200A88680069EA94 /* Flappy Bird */ = {
 			isa = PBXGroup;
 			children = (
+				72152791200E1435001812F1 /* Score.swift */,
+				72BE7180200BA807006BD73E /* SettingsTableViewController.swift */,
 				724A0E56200A88680069EA94 /* AppDelegate.swift */,
 				724A0E58200A88680069EA94 /* GameScene.sks */,
 				724A0E5A200A88680069EA94 /* Actions.sks */,
@@ -151,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				724A0E5D200A88680069EA94 /* GameScene.swift in Sources */,
+				72BE7181200BA807006BD73E /* SettingsTableViewController.swift in Sources */,
 				724A0E5F200A88680069EA94 /* GameViewController.swift in Sources */,
 				7221F0F2200B5B100039004A /* RandomFunction.swift in Sources */,
+				72152792200E1435001812F1 /* Score.swift in Sources */,
 				724A0E57200A88680069EA94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

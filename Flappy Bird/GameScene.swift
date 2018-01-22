@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
 
 struct PhysicsCatagory {
     static let Ghost : UInt32 = 0x1 << 1
@@ -19,7 +20,9 @@ struct PhysicsCatagory {
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
+    var referenceOfGameViewController : GameViewController!
+    var viewController : UIViewController!
+    var scoreClass = Score()
     
     var Ground = SKSpriteNode()
     var Ghost = SKSpriteNode()
@@ -35,7 +38,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var died = Bool()
     var restartBTN = SKSpriteNode()
-    
+    var hightScoreBTN = SKSpriteNode()
     func restartScene(){
         
         self.removeAllChildren()
@@ -48,7 +51,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createScene(){
-        
+        self.physicsWorld.gravity = CGVector.init(dx: 0, dy: -2)
+    
         self.physicsWorld.contactDelegate = self
         
         for i in 0..<2 {
@@ -63,7 +67,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         scoreLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + self.frame.height / 2.5)
         scoreLbl.text = "\(score)"
-        scoreLbl.fontName = "04b_19"
         scoreLbl.zPosition = 5
         scoreLbl.fontSize = 60
         self.addChild(scoreLbl)
@@ -125,6 +128,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(restartBTN)
         restartBTN.run(SKAction.scale(to: 1.0, duration: 0.3))
         
+        hightScoreBTN = SKSpriteNode(imageNamed: "Highscores")
+        hightScoreBTN.size = CGSize(width: 200, height: 100)
+        hightScoreBTN.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 - 150)
+        hightScoreBTN.zPosition = 7
+        hightScoreBTN.setScale(0)
+        self.addChild(hightScoreBTN)
+        hightScoreBTN.run(SKAction.scale(to: 1.0, duration: 0.3))
+        
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -158,6 +169,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }))
             if died == false{
                 died = true
+                if score > scoreClass.minOfScores() || scoreClass.scores.capacity <= 5 {
+                    addScore(score: score)
+                }
                 createBTN()
             }
         }
@@ -172,14 +186,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }))
             if died == false{
                 died = true
+                if score > scoreClass.minOfScores() {
+                    addScore(score: score)
+                }
                 createBTN()
             }
         }
-        
-        
-        
-        
-        
     }
     
     
@@ -209,18 +221,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             moveAndRemove = SKAction.sequence([movePipes, removePipes])
             
             Ghost.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-            Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 25))
+            Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 30))
         }
         else{
             
             if died == true{
-                
-               // createBTN()
+   
                 
             }
             else{
                 Ghost.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-                Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 25))
+                Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 30))
             }
             
         }
@@ -234,7 +245,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if died == true{
                 if restartBTN.contains(location){
                     restartScene()
-                    
+                }
+                if hightScoreBTN.contains(location){
+                    showScore()
                 }
                 
                 
@@ -333,9 +346,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
         }
+    }
+    
+    func  addScore(score: Int) {
+        let passwordAllertController = UIAlertController(title: "Good Job", message: "Please write your name", preferredStyle: .alert)
+        passwordAllertController.addAction(UIAlertAction(title: "Save", style: .default, handler: {(alert: UIAlertAction) in
+            self.scoreClass.appendNewScore(newName: passwordAllertController.textFields![0].text!, newScore: score)
+        }))
+        passwordAllertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        passwordAllertController.addTextField { (passwordTextField)  in
+            passwordTextField.placeholder = "Name"
+        }
         
-        
-        
+        self.viewController.present(passwordAllertController, animated: true, completion: nil)
         
     }
+    
+    func  showScore() {
+        var mes = String()
+        var items = [(key: String, value: Int)]()
+        let passwordAllertController = UIAlertController(title: "Good Job", message: "This is table with supermans", preferredStyle: .alert)
+        passwordAllertController.addAction(UIAlertAction(title: "OK, í`m done", style: .default, handler: nil))
+       
+        items = scoreClass.scores.sorted(by: { $0.value < $1.value })
+        for i in items {
+            mes += i.key + "  " + String(i.value) + "\n"
+        }
+        passwordAllertController.message = mes
+        self.viewController.present(passwordAllertController, animated: true, completion: nil)
+        
+    }
+    
 }

@@ -10,12 +10,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flappy Bird/GameScene.swift"
-            timestampString = "537628264.721586"
+            timestampString = "537828495.182948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "didBegin(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flappy_Bird.GameScene.didBegin(__ObjC.SKPhysicsContact) -&gt; ()"
+                  moduleName = "Flappy Bird"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/viktoriiarohozhyna/Documents/Documents%20-%20Viktoriia%E2%80%99s%20MacBook%20Pro/repository/Flappy%20Bird/Flappy%20Bird/GameScene.swift"
+                  timestampString = "537819344.506163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "3108">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.SKNode, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in Flappy_Bird.GameScene.didBegin(__ObjC.SKPhysicsContact) -&gt; ()"
+                  moduleName = "Flappy Bird"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/viktoriiarohozhyna/Documents/Documents%20-%20Viktoriia%E2%80%99s%20MacBook%20Pro/repository/Flappy%20Bird/Flappy%20Bird/GameScene.swift"
+                  timestampString = "537819344.55112"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flappy Bird/GameScene.swift"
+            timestampString = "537828495.18334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "didBegin(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flappy_Bird.GameScene.didBegin(__ObjC.SKPhysicsContact) -&gt; ()"
+                  moduleName = "Flappy Bird"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/viktoriiarohozhyna/Documents/Documents%20-%20Viktoriia%E2%80%99s%20MacBook%20Pro/repository/Flappy%20Bird/Flappy%20Bird/GameScene.swift"
+                  timestampString = "537819344.5578279"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "4840">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__ObjC.SKNode, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in Flappy_Bird.GameScene.didBegin(__ObjC.SKPhysicsContact) -&gt; ()"
+                  moduleName = "Flappy Bird"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/viktoriiarohozhyna/Documents/Documents%20-%20Viktoriia%E2%80%99s%20MacBook%20Pro/repository/Flappy%20Bird/Flappy%20Bird/GameScene.swift"
+                  timestampString = "537819344.559503"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flappy Bird/GameScene.swift"
+            timestampString = "537828495.183486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
+            landmarkName = "addScore(score:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
